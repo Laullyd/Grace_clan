@@ -1,0 +1,1111 @@
+/* GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(36, 36, 36);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+hr {
+  background: rgb(199, 199, 199);
+  width: 100%;
+}
+
+/* NAV*/
+#nav-bar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background: #ebebeb;
+  transition: .3s ease-in-out;
+}
+#logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo-inner {
+  display: flex;
+  height: 90%;
+  color: rgb(36, 36, 36);
+  text-decoration: none;
+}
+#logo-img {
+  display: block;
+  width: fit-content;
+}
+#logo-txt {
+  padding: 4.5px 0;
+  height: 100%;
+  width: 100%;
+  letter-spacing: -8%;
+  color: rgb(36, 36, 36);
+  font-style: italic;
+  transition: .3s ease-in-out;
+}
+.links-nav {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  transition: .3s ease-in-out;
+}
+#links-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3%;
+  height: 90%;
+  width: 70%;
+  padding: 10px 5%;
+  margin-right: 4%;
+}
+.nav-links a {
+  text-decoration: none;
+  color: rgb(30, 86, 30);
+  font-size: .95em;
+  transition: .3s ease-in-out;
+}
+.nav-links:last-child {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 8px 3%;
+  border-radius: 25px;
+  background:rgb(30, 86, 30);
+}
+.nav-links:last-child a {
+  color: white;
+}
+.nav-links:last-child:hover {
+  background: #2d6a36;
+}
+.nav-links:not(:last-child) a:hover {
+  text-decoration: underline;
+}
+.nav-links a.active {
+  /* color: rgb(75, 154, 75); */
+  font-weight: bold;
+}
+#support {
+  display: none;
+}
+#option-btn {
+  padding: 7px 1%;
+  display: none;
+}
+#option-btn a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Head */
+#head {
+  padding: 40px 7%;
+  min-height: 400px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  background-color: #F2F6F2;
+}
+#head p {
+  font-size: 1rem;
+  line-height: 1.8;
+  word-spacing: 1px;
+  /* letter-spacing: 1px; */
+  color: #555555;
+}
+#head p.first {
+  color: rgb(30, 86, 30);
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+#head h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 3em;
+}
+.txt-dividers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  height: 20px;
+  color: rgb(30, 86, 30);
+  margin-left: .4%;
+  margin-top: 0px;
+}
+.txt-dividers span {
+  display: block;
+  width: 70px;
+  height: 2px;
+  background: rgb(30, 86, 30);
+  /* border: 1px solid rgb(30, 86, 30); */
+}
+.center-dots {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #2D6A4F;
+  border: 1px solid #2D6A4F;
+}
+
+/* Join Us*/
+.join-us-section {
+  width: 100%;
+  padding: 85px 8%;
+}
+.join-us-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+.join-us-intro {
+  text-align: left;
+}
+.join-us-intro .section-label {
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(30, 86, 30);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.join-us-intro h2 {
+  margin: 0;
+  color: #1F1F1F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.join-us-intro .section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 120px;
+  margin: 22px 0 0;
+}
+.join-us-intro .section-divider::before, .join-us-intro .section-divider::after {
+  content: "";
+  width: 45px;
+  height: 1px;
+  background-color: rgb(30, 86, 30);
+}
+.join-us-intro .section-divider span {
+  width: 6px;
+  height: 6px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: rgb(30, 86, 30);
+}
+.join-us-action {
+  padding-left: 50px;
+  border-left: 1px solid #CCD8D0;
+}
+.join-us-action p {
+  max-width: 480px;
+  margin: 0 0 28px;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.join-us-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.join-whatsapp {
+  background-color: rgb(30, 86, 30);
+  color: #FFFFFF;
+}
+.join-whatsapp:hover {
+  background-color: transparent;
+  color: rgb(30, 86, 30);
+}
+.join-form {
+  background-color: transparent;
+  color: rgb(30, 86, 30);
+}
+.join-form:hover {
+  background-color: rgb(30, 86, 30);
+  color: #FFFFFF;
+}
+.join-btn i {
+  font-size: 1rem;
+}
+.join-us-action small {
+  display: block;
+  margin-top: 16px;
+  color: #777777;
+  font-size: 0.78rem;
+}
+
+/* Support Us*/
+.support-us-section {
+  width: 100%;
+  padding: 90px 8%;
+  background-color: #FAF8F4;
+}
+.support-us-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+.support-us-content h2 {
+  margin: 0;
+  color: #1F1F1F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.support-us-content > p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.giving-details {
+  max-width: 650px;
+  margin: 40px auto 30px;
+  padding: 30px 35px;
+  border: 1px solid #D9DED9;
+  border-radius: 12px;
+  text-align: left;
+}
+.giving-details h3 {
+  margin: 0 0 25px;
+  color: rgb(30, 86, 30);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.account-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 0;
+  border-bottom: 1px solid #E8EBE8;
+}
+.account-detail:last-child {
+  border-bottom: none;
+}
+.account-detail span {
+  color: #777777;
+  font-size: 0.85rem;
+}
+.account-detail strong {
+  color: #222222;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.account-number-value {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.account-number-value strong {
+  letter-spacing: 1px;
+}
+.account-number-value button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 20px;
+  background-color: transparent;
+  color: rgb(30, 86, 30);
+  font-family: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.account-number-value button:hover {
+  background-color: rgb(30, 86, 30);
+  color: #FFFFFF;
+}
+.support-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 25px;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 30px;
+  background-color: rgb(30, 86, 30);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.support-contact-btn:hover {
+  background-color: transparent;
+  color: rgb(30, 86, 30);
+}
+.support-us-content > small {
+  display: block;
+  margin-top: 18px;
+  color: #777777;
+  font-size: 0.8rem;
+}
+
+/* Pray With Us*/
+.pray-with-us-section {
+  width: 100%;
+  padding: 90px 8%;
+  overflow: hidden;
+}
+.pray-with-us-content {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pray-symbol {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(45, 106, 79, 0.08);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13rem;
+  line-height: 1;
+  pointer-events: none;
+}
+.pray-with-us-content .section-label {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(30, 86, 30);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.pray-with-us-content h2 {
+  position: relative;
+  margin: 0;
+  color: #1F1F1F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 600;
+}
+.pray-with-us-content p {
+  position: relative;
+  max-width: 600px;
+  margin: 22px auto 30px;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.prayer-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 25px;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 30px;
+  background-color: rgb(30, 86, 30);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.prayer-btn:hover {
+  background-color: transparent;
+  color: rgb(30, 86, 30);
+}
+
+/* Contact Us*/
+.contact-us-section {
+  width: 100%;
+  padding: 95px 8%;
+  background-color: #FAF8F4;
+}
+.contact-us-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+.contact-information {
+  padding-top: 10px;
+}
+.contact-information .section-label {
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(30, 86, 30);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.contact-information h2 {
+  margin: 0;
+  color: #1F1F1F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.contact-information > p {
+  max-width: 430px;
+  margin: 20px 0 35px;
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: inherit;
+  text-decoration: none;
+}
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 50%;
+  color: rgb(30, 86, 30);
+  font-size: 0.9rem;
+}
+.contact-detail span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.contact-detail small {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.contact-detail strong {
+  color: #222222;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.social-links {
+  margin-top: 40px;
+}
+.social-links > span {
+  display: block;
+  margin-bottom: 14px;
+  color: #333333;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 50%;
+  color: rgb(30, 86, 30);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  color: #FFFFFF;
+}
+.social-icons .Facebook:hover {
+  background: #1877F2;
+}
+.social-icons .Instagram:hover {
+  background: linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+}
+.social-icons .Youtube:hover {
+  background: #FF0000;
+}
+.social-icons .Tiktok:hover {
+  background: #000;
+}
+.contact-form-container {
+  padding: 35px 40px;
+  border: 1px solid #D9DED9;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+.contact-form-container h3 {
+  margin: 0 0 28px;
+  color: #1F1F1F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.form-group label {
+  color: #444444;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #D5DAD5;
+  border-radius: 8px;
+  outline: none;
+  background-color: #FAFAF8;
+  color: #222222;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: border-color 0.3s ease;
+}
+.form-group input {
+  height: 45px;
+}
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+.form-group input:focus, .form-group textarea:focus {
+  border-color: rgb(30, 86, 30);
+}
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: #999999;
+}
+.contact-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: 5px;
+  padding: 13px 24px;
+  border: 1px solid rgb(30, 86, 30);
+  border-radius: 30px;
+  background-color: rgb(30, 86, 30);
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-submit-btn:hover {
+  background-color: transparent;
+  color: rgb(30, 86, 30);
+}
+
+/* Footer*/
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  gap: 5px;
+  background: rgb(36, 36, 36);
+  font-size: smaller;
+  font-weight: bold;
+  padding: 20px 5%;
+}
+.each-footer-cont {
+  padding: 5px 3%;
+  color: #f8f7fa;
+}
+#GC-cont {
+  text-align: center;
+}
+#social-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.socials-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.socials-inner-cont {
+  border-radius: 5px;
+  perspective: 1000px;
+}
+.facebook, .instagram, .youtube, .tiktok {
+  display: block;
+  padding: 5px;
+  height: 30px;
+  width: 35px;
+  border-radius: 5px;
+  transform-style: preserve-3d;
+}
+.fb {
+  background: #3B5998;
+  text-align: center;
+}
+.facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 5px;
+  transition: transform 1s ease;
+}
+.inst {
+  background: #fff;
+  text-align: center;
+}
+.instagram {
+  margin: auto;
+  background: #fff;
+  color: #df2d36;
+  border-radius: 5px;
+  transition: transform .5s ease;
+}
+.ytb {
+  background: rgb(205, 32, 31);
+  text-align: center;
+}
+.youtube {
+  margin: auto;
+  background: rgb(205, 32, 31);
+  color: white;
+  border-radius: 5px;
+  transition: transform .5s ease;
+}
+.tik {
+  background: rgb(6, 6, 6);
+  text-align: center;
+}
+.tiktok {
+  margin: auto;
+  background: rgb(6, 6, 6);
+  color: white;
+  border-radius: 5px;
+  transition: transform .5s ease;
+}
+.facebook:hover, .instagram:hover, .youtube:hover, .tiktok:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+#nav-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+#nav-cont div a {
+  text-decoration: none;
+  color: #f8f7fa;
+  transition: .2s ease-in-out;
+}
+#nav-cont div a:hover {
+  color: rgb(142, 198, 142);
+}
+#contact-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#contact-cont h4 {
+  font-weight: lighter;
+}
+#contact-cont a {
+  text-decoration: none;
+  color: rgb(142, 198, 142);
+}
+#contact-cont a:visited {
+  color: #a7e2fd;
+}
+#contact-cont a:hover {
+  text-decoration: underline;
+}
+#support-cont a {
+  color: #f8f7fa;
+  transition: .2s ease-in-out;
+}
+#support-cont a:hover {
+  text-decoration: none;
+  color: rgb(142, 198, 142);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+  h2 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: .85em;
+  }
+  .text-conts h2 {
+    font-size: 1.8em;
+  }
+  .text-conts p {
+    font-size: .85em;
+  }
+  #logo-txt {
+    font-size: 1.5em;
+  }
+  #links-nav-inner {
+    gap: 5%;
+    margin-right: 10%;
+  }
+  #head h2 {
+    font-size: 2.5em;
+  }
+  #head p {
+    width: 95%;
+  }
+  .txt-dividers span {
+    width: 50px;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .center-dots {
+    height: 12px;
+    width: 12px;
+    width: 12px;
+  }
+  /* Join Us */
+  .join-us-section {
+    padding: 75px 6%;
+  }
+  .join-us-content {
+    gap: 45px;
+  }
+  .join-us-intro h2 {
+    font-size: 2.8rem;
+  }
+  .join-us-action {
+    padding-left: 35px;
+  }
+  .join-us-action p {
+    font-size: 0.95rem;
+  }
+  /* Support Us */
+  .support-us-content h2 {
+    font-size: 2rem;
+  }
+  .support-us-content > p {
+    max-width: 600px;
+  }
+  .support-us-section {
+    padding: 75px 6%;
+  }
+  .giving-details {
+    max-width: 600px;
+    padding: 28px 30px;
+  }
+  /* Pray With Us */
+  .pray-with-us-section {
+    padding: 75px 6%;
+  }
+  .pray-with-us-content h2 {
+    font-size: 2.8rem;
+  }
+  .pray-symbol {
+    font-size: 11rem;
+    top: -45px;
+  }
+  /* Contact Us*/
+  .contact-us-section {
+    padding: 75px 6%;
+  }
+  .contact-us-content {
+    gap: 50px;
+  }
+  .contact-information h2 {
+    font-size: 2.8rem;
+  }
+  .contact-information>p {
+    max-width: 400px;
+  }
+  .contact-form-container {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: .85em;
+  }
+  .text-conts h2 {
+    font-size: 1.6em;
+  }
+  .text-conts p {
+    font-size: .85em;
+  }
+  #logo {
+    justify-content: flex-start;
+  }
+  #logo-inner {
+    margin-left: 5%;
+  }
+  #support {
+    display: block;
+    padding: 4px 3%;
+    height: 60%;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-right: 4%;
+    font-size: .9em;
+    background:rgb(30, 86, 30);
+  }
+  #support a {
+    color: white;
+    text-decoration: none;
+  }
+  #support:hover {
+    background: #2d6a36;
+  }
+  #option-btn {
+    display: block;
+    text-decoration: none;
+    margin-right: 3%;
+  }
+  #cancel-menu {
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    display: inline-block;
+    color: #000;
+    font-size: 155%;
+  }
+  #cancel-menu:hover {
+    color: rgb(248, 155, 155);
+    cursor: pointer;
+  }
+  #nav-bar .links-nav {
+    flex: 1;
+    background: #d7d7d7;
+    display: block;
+    width: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    z-index: 5;
+  }
+  #links-nav-inner {
+    display: block;
+    background: #d7d7d7;
+    margin-top: 50px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links {
+    padding: 7px 2%;
+    width: 100%;
+  }
+  .nav-links a {
+  color: rgb(36, 36, 36);
+  }
+  .nav-links:not(:last-child) a:hover {
+    text-decoration: none;
+  }
+  div#nav-bar .for-media-query {
+    top: 0;
+    background: #d7d7d7;
+    width: 30%;
+    right: 0;
+  }
+  #head p {
+    font-size: .9em;
+  }
+  #head h2 {
+    font-size: 2.2em;
+  }
+  /* Join Us */
+  .join-us-section {
+    padding: 65px 6%;
+  }
+  .join-us-content {
+    display: block;
+  }
+  .join-us-intro {
+    text-align: center;
+  }
+  .join-us-intro h2 {
+    font-size: 2.3rem;
+    line-height: 1.15;
+  }
+  .join-us-intro .section-divider {
+    justify-content: center;
+    margin: 20px auto 0;
+  }
+  .join-us-action {
+    margin-top: 35px;
+    padding: 30px 0 0;
+    border-top: 1px solid #CCD8D0;
+    border-left: none;
+    text-align: center;
+  }
+  .join-us-action p {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .join-us-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .join-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+  /* Support Us */
+  .support-us-section {
+    padding: 65px 6%;
+  }
+  .giving-details {
+    margin-top: 32px;
+    padding: 25px 20px;
+  }
+  .account-detail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .account-number-value {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .account-number-value strong {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+  .support-contact-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+  /* Pray With Us */
+  .pray-with-us-section {
+    padding: 65px 6%;
+  }
+  .pray-with-us-content h2 {
+    font-size: 2.3rem;
+  }
+  .pray-with-us-content p {
+    width: 100%;
+    max-width: 500px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .pray-symbol {
+    font-size: 9rem;
+    top: -35px;
+  }
+  .prayer-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+  /* Contact Us*/
+  .contact-us-section {
+    padding: 65px 6%;
+  }
+  .contact-us-content {
+    display: block;
+  }
+  .contact-information {
+    padding-top: 0;
+    margin-bottom: 45px;
+  }
+  .contact-information h2 {
+      font-size: 2.3rem;
+  }
+  .contact-information > p {
+    width: 100%;
+    max-width: 500px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .contact-details {
+    gap: 18px;
+  }
+  .social-links {
+    margin-top: 32px;
+  }
+  .contact-form-container {
+    padding: 28px 20px;
+  }
+  .contact-form-container h3 {
+    font-size: 1.7rem;
+  }
+  .contact-submit-btn {
+    width: 100%;
+  }
+}
